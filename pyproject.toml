@@ -11,6 +11,12 @@ authors = [
 description = "Converts mod_security violation logging to an HTML page"
 readme = "README.md"
 requires-python = ">=3.8"
+dependencies = [
+    "jinja2",
+]
+
+[project.scripts]
+mod_sec_report = "mod_sec_report"
 
 [project.urls]
 Homepage = "https://github.com/leoberry/mod_sec_report"
