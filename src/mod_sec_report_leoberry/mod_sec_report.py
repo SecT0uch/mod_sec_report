@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
-import sys
-import argparse
-import json
-import codecs
-import shlex
 import datetime
 import gzip
-from jinja2 import Template, Environment, FileSystemLoader
+import json
+import sys
+
+from jinja2 import Environment, FileSystemLoader
+
 
 def parse_modsec_line(line):
     """
