@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mod_sec_report_leoberry"
+version = "0.0.1"
+authors = [
+  { name="Léo Berry", email="leo@mezcalito.fr" },
+]
+description = "Converts mod_security violation logging to an HTML page"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/leoberry/mod_sec_report"
+Issues = "https://github.com/leoberry/mod_sec_report/issues"
