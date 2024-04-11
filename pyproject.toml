@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mod_sec_report = "mod_sec_report:main"
+mod_sec_report = "mod_sec_report_leoberry:main"
 
 [project.urls]
 Homepage = "https://github.com/leoberry/mod_sec_report"
