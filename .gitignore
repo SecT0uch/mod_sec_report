@@ -2,3 +2,4 @@ example/
 bin/
 lib/
 pyvenv.cfg
+dist/
