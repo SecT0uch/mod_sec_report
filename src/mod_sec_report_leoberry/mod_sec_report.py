@@ -54,24 +54,3 @@ def output(entries):
     environment = Environment(loader=FileSystemLoader("templates/"))
     template = environment.get_template("mod_sec_report.tpl")
     print(template.render(entries=entries))
-
-
-def main():
-    parser = argparse.ArgumentParser(description="ModSecurity Report generator")
-    parser.add_argument("logfiles",
-                        metavar="LOGFILES",
-                        type=str,
-                        nargs="+",
-                        help="ModSec log files in JSON fmt")
-
-    args = parser.parse_args()
-
-    entries = []
-    for logfile in args.logfiles:
-        entries.extend(parse_modsec_file(logfile))
-
-    output(sorted(entries, key=lambda entry: entry["transaction"]["time_parsed"]))
-
-
-if __name__ == "__main__":
-    main()
