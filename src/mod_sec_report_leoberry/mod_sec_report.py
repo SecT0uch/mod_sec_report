@@ -56,7 +56,7 @@ def output(entries):
     print(template.render(entries=entries))
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="ModSecurity Report generator")
     parser.add_argument("logfiles",
                         metavar="LOGFILES",
@@ -71,3 +71,7 @@ if __name__ == "__main__":
         entries.extend(parse_modsec_file(logfile))
 
     output(sorted(entries, key=lambda entry: entry["transaction"]["time_parsed"]))
+
+
+if __name__ == "__main__":
+    main()
